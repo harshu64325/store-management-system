@@ -1,0 +1,57 @@
+Configure Basic Requirements of Store
+
+	Setup Your Database Using Following Steps:
+
+		Installation Steps:
+
+			Step 1 – Double click on "mysql-installer-community-8.0.43.0".
+
+			Step 2 – Select setup type FULL, then press "NEXT".
+
+			Step 3 – Click on "EXECUTE".
+
+			Step 4 – After some time, an installation confirmation window of Microsoft Visual C++ will appear.
+
+			Step 5 – Accept licenses and click on "Install".
+
+			Step 6 – After installation, click on "Next".
+
+			Step 7 – You will see an installation window, then click "Execute". After completion of execution, click "Next".
+
+			Step 8 – Keep clicking "Next" until you reach the Account and Roles page. Enter the password = 1234, then click "Next".
+
+			Step 9 – Fill in the username and password as given below:
+
+				Username = root
+				Password = 1234
+
+			Step 10 – Continue clicking "Next" until you see the Apply Configuration page, then click "Execute". After execution, click "Finished".
+				After clicking Finished, the installation is complete.
+
+	Restore Database Steps:
+
+			Step 1 – Open MySQL Command Line Client (CLI) or MySQL Workbench.
+
+				Login using the credentials:
+					Username = root
+					Password = 1234
+
+			Step 2 – Create the database (if not already created):
+					CREATE DATABASE store;
+
+			Step 3 – Open Command Prompt (CMD) in the current directory where your backup file is stored.
+
+			Step 4 – Exit the MySQL client and restore the database backup using the following command in CMD:
+					mysql -u root -p store < store.sql
+					store.sql = your backup store and current path.
+
+			Step 5 – When prompted, enter the password 1234.
+
+			Step 6 – After completion, verify by logging into MySQL Client and running:
+					SHOW DATABASES;
+					USE store;
+					SHOW TABLES;
+
+✅ Your MySQL installation and database restore process is now complete.
+				
+		
